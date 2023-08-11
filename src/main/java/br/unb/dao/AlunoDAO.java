@@ -37,7 +37,7 @@ public class AlunoDAO {
 		return aluno;
 
 	}
-	public Aluno getById(Long id) {
+	public Aluno getById(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
 		Aluno aluno = (Aluno) session.get(Aluno.class, id);
@@ -63,7 +63,7 @@ public class AlunoDAO {
 
 	}
 
-	public void delete(Long id) {
+	public void delete(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 

@@ -38,7 +38,7 @@ public class DisciplinaDAO {
 		return disciplina;
 
 	}
-	public Disciplina getById(Long id) {
+	public Disciplina getById(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 
 		// Usando get() para ler a disciplina com o ID especificado
@@ -66,7 +66,7 @@ public class DisciplinaDAO {
 
 	}
 
-	public void delete(Long id) {
+	public void delete(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 

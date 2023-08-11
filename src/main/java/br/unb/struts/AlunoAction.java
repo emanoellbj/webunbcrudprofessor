@@ -46,7 +46,7 @@ public class AlunoAction extends Action {
                     break;
                 case "editar":
                     int id = Integer.parseInt(request.getParameter("id"));
-                    aluno = alunoDAO.getById(Long.valueOf(id));
+                    aluno = alunoDAO.getById(id);
                     alunoForm.setId(aluno.getId());
                     alunoForm.setNome(aluno.getNome());
                     alunoForm.setMatricula(aluno.getMatricula());
@@ -57,7 +57,7 @@ public class AlunoAction extends Action {
                     break;
                 case "excluir":
                     id = Integer.parseInt(request.getParameter("id"));
-                    alunoDAO.delete(Long.valueOf(id));
+                    alunoDAO.delete(id);
                     break;
             }
         }

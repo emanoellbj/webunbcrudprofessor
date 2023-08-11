@@ -45,7 +45,7 @@ public class DisciplinaAction extends Action {
 				break;
 			case "editar":
 				int id = Integer.parseInt(request.getParameter("id"));
-				disciplina = disciplinaDAO.getById(Long.valueOf(id));
+				disciplina = disciplinaDAO.getById(id);
 				disciplinaForm.setId(disciplina.getId());
 				disciplinaForm.setNome(disciplina.getNome());
 				disciplinaForm.setTurma(disciplina.getTurma());
@@ -59,7 +59,7 @@ public class DisciplinaAction extends Action {
 				break;
 			case "excluir":
 				id = Integer.parseInt(request.getParameter("id"));
-				disciplinaDAO.delete(Long.valueOf(id));
+				disciplinaDAO.delete(id);
 				;
 				break;
 			}

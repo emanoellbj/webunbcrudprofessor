@@ -32,7 +32,7 @@ public class ProfessorDAO {
 		return professor;
 
 	}
-	public Professor getById(Long id) {
+	public Professor getById(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		// Usando get() para ler a professor com o ID especificado
 		Professor professor = (Professor) session.get(Professor.class, id);
@@ -59,7 +59,7 @@ public class ProfessorDAO {
 
 	}
 
-	public void delete(Long id) {
+	public void delete(Integer id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 

@@ -43,7 +43,7 @@ public class ProfessorAction extends Action {
                     break;
                 case "editar":
                     int id = Integer.parseInt(request.getParameter("id"));
-                    professor = professorDAO.getById(Long.valueOf(id));
+                    professor = professorDAO.getById(id);
                     professorForm.setId(professor.getId());
                     professorForm.setNome(professor.getNome());
                     break;
@@ -53,7 +53,7 @@ public class ProfessorAction extends Action {
                     break;
                 case "excluir":
                     id = Integer.parseInt(request.getParameter("id"));
-                    professorDAO.delete(Long.valueOf(id));
+                    professorDAO.delete(id);
                     break;
             }
         }
